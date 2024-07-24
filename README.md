@@ -10,6 +10,10 @@ idk, seems possible.
 
 ## To-do list
 - Finish Startup Sequence [mostly ✅]
+  - Add stars animation []
+  - Fade effects []
+  - Video intros [✅]
+  - Disclaimer text at the beginning []
 - Finish Homepage [✅]
 - Create category pages []
   - Productivity []
