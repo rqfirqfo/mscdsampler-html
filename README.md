@@ -1,5 +1,5 @@
 # MS Interactive HTML Sampler
-An attempt to rewrite the 1996 version of Microsoft Interactive CD Sampler into HTML.
+An attempt to rewrite the 1996 version of **Microsoft Interactive CD Sampler** into HTML.
 
 ## Why?
 idk, seems possible.
