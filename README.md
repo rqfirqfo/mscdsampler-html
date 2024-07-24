@@ -4,7 +4,7 @@ An attempt to recreate the 1996 version of **Microsoft Interactive CD Sampler** 
 *Where do you want to go today?*
 
 ## Want to take a look?
-Currently, there is no GitHub Pages instances at the moment as i'm still working on this, you can download this as a ZIP and load the index.html file.
+Currently, there is no GitHub Pages instances at the moment because this is currently not finished, you can download this as a ZIP and load the index.html file.
 
 ## Why?
 idk, seems possible.
