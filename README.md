@@ -1,5 +1,5 @@
 # MS Interactive HTML Sampler
-An attempt to recreate the 1996 version of **Microsoft Interactive CD Sampler** into HTML.
+An attempt to recreate the 1996 version of **Microsoft Interactive CD Sampler** into a more modern web technologies like HTML and CSS.
 
 *Where do you want to go today?*
 
