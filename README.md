@@ -26,3 +26,6 @@ idk, seems possible.
     - Credits []
 - Clean up and polish []
 - Set to public []
+
+## Copyright stuff
+All images, videos and audio are copyrighted to their respectful creators at Microsoft.
