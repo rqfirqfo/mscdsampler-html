@@ -4,5 +4,21 @@ An attempt to rewrite the 1996 version of Microsoft Interactive CD Sampler into 
 ## Why?
 idk, seems possible.
 
-## Why is this private?
-I'm still figuring out how GitHub works since this is my second repository i've made here.
+## Goals
+- Try and make this as accurate as possible to the original software.
+- Learn jQuery (I have never learned js in my whole life so this is interesting)
+
+## To-do list
+- Finish Startup Sequence [mostly ✅]
+- Finish Homepage [✅]
+- Create category pages []
+  - Productivity []
+  - Online []
+  - Knowledge []
+  - Games []
+  - Kids[]
+- Create miscellaneous pages []
+  - Accessories []
+    - Credits []
+- Clean up and polish []
+- Set to public []
