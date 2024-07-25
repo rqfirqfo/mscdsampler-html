@@ -8,7 +8,7 @@ Go to the GitHub Pages instance I have running [here](https://rqfirqfo.github.io
 
 ## Goals
 - Try and make the UI as accurate as possible to the original software.
-- Learn more about HTML and JS (i am still a little baby at programming and i use jquery bc i suck at js)
+- Learn more about HTML and JS (i am still a little baby at web programming and i use jquery bc i suck at js)
 
 ## To-do list
 See [TODO.md](TODO.md)
