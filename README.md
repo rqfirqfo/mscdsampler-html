@@ -1,10 +1,12 @@
 # MS Interactive HTML Sampler
-An attempt to recreate the 1996 version of **Microsoft Interactive CD Sampler** to HTML.
+An work in progress attempt to recreate the 1996 version of **Microsoft Interactive CD Sampler** to HTML.
 
 *Where do you want to go today?*
 
 ## Want to take a look?
-Go to the GitHub Pages instance I have running [here](https://rqfirqfo.github.io/mscdsampler-html/)
+*Please do note that this project is still not finished and is being worked on.*
+Go to the GitHub Pages instance I have running [here](https://rqfirqfo.github.io/mscdsampler-html/).
+or alternatively, you can just download the zip
 
 ## Goals
 - Try and make the UI as accurate as possible to the original software.
