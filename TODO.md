@@ -18,6 +18,6 @@
 - Create miscellaneous pages []
   - Accessories []
     - Credits []
-- Seperate CSS and JS code into seperate files []
+- Seperate CSS and JS code into seperate files [✅]
 - Create some catalog demos []
 - maybe electron port?? []
