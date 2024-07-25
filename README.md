@@ -1,7 +1,7 @@
 # MS Interactive HTML Sampler
 An work in progress attempt to recreate the 1996 version of **Microsoft Interactive CD Sampler** to HTML.
 
-*Where do you want to go today?*
+*Explore the interactive worlds of Microsoft consumer products.*
 
 ## Want to take a look?
 *Please do note that this project is still not finished and is being worked on, so expect some bugs and unfinished features.*
