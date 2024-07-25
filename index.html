@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Interactive CD Sampler</title>
+</head>
+<style>
+    @font-face {
+        font-family: mssans;
+        src: url(w95fa.woff2) format('woff2');
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container{
+        display: none;
+        width: 640px;
+        height: 440px;
+        background-image: url(images/MAIN3A.BMP);
+    }
+
+    .skip-text{
+        display: none;
+        font-family: mssans;
+        color: rgb(165, 165, 165);
+        font-size: 14px;
+        padding: 8px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+    .homepage{
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .categories{
+        position: relative;
+        width: 81.3%;
+        height: 87%;
+        padding: 15px 40px;
+        padding-bottom: 0px;
+    }
+
+    .category{
+        position: absolute;
+        width: 187px;
+        height: 177px;
+        display: none;
+    }
+
+    .category.prod{
+        background-image: url(images/mnprbtn.bmp);
+        z-index: 1;
+    }
+
+    .category.online{
+        background-image: url(images/mnolbtn.bmp);
+        bottom: 0;
+    }
+
+    .category.games{
+        background-image: url(images/mngmbtn.bmp);
+        right: 0;
+    }
+
+    .category.kids{
+        background-image: url(images/mnkdbtn.bmp);
+        right: 0;
+        bottom: 0;
+    }
+
+    .category.knowledge{
+        background-image: url(images/mnkwbtn.bmp);
+        right: 186px;
+        top: 120px;
+        height: 193px;
+    }
+
+    .category:hover{
+        background-position: 374px center;
+    }
+
+    .category:active{
+        background-position: 187px center;
+    }
+
+    .bottom-nav{
+        position: relative;
+        bottom: 0;
+        padding: 0px 5px;
+        display: flex;
+        justify-content: space-between;
+        display: none;
+    }
+
+    .intro-button{
+        background: url(images/cambtn.bmp);
+        border: none;
+        width: 76px;
+        height: 36px;
+    }
+
+     .intro-button:active{
+        background-position: 76px center;
+    }
+
+    .intro-button:hover{
+        background-position: 154px center;
+    }
+
+    .exit-button{
+        background: url(images/exitbtn.bmp);
+        border: none;
+        width: 60px;
+        height: 36px;
+    }
+
+    .exit-button:hover{
+        background-position: -67.5px center;
+    }
+
+    .exit-button:active{
+        background-position: 66px center;
+    }
+
+    .accessory-button{
+        background: url(images/suitbtn.bmp);
+        border: none;
+        width: 133px;
+        height: 36px;
+    }
+
+    .accessory-button:hover{
+        background-position: 266px center;
+    }
+
+    .accessory-button:active{
+        background-position: 133px center;
+    }
+
+</style>
+<body>
+    <div class="startup">
+        <video src="video/mslogo.mp4" autoplay id="start-video"></video>
+        <span class="disclamer-text"></span>
+        <span class="skip-text">Skip to Main Menu</span>
+    </div>
+
+    <div class="container">
+        <audio src="sounds/NAR10.WAV" id="audio-thingy"></audio>
+        <div class="homepage">
+            <div class="categories">
+                <div class="category prod"></div>
+                <div class="category online"></div>
+                <div class="category knowledge"></div>
+                <div class="category games"></div>
+                <div class="category kids"></div>
+            </div>
+            <div class="bottom-nav">
+                <button class="intro-button"></button>
+                <button class="accessory-button"></button>
+                <button class="exit-button"></button>
+            </div>
+        </div>
+        <div class="categorypage">
+
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var startVideo = $('#start-video')[0];
+        var backgroundAudio = $('#audio-thingy')[0];
+        var container = $('.container');
+        var categories = $('.category');
+
+        startVideo.onended = function(e) {
+            startVideo.src = "video/intro.mp4";
+            startVideo.load();
+            startVideo.play();
+            $('.skip-text').css('display', 'block');
+
+            $('.skip-text').click(function(){
+                stopStartup();
+            });
+
+            startVideo.onended = function(e) {
+                stopStartup();
+            }
+        };
+            
+        function stopStartup() {
+            startVideo.pause();
+            backgroundAudio.play();
+            startVideo.src = "";
+            $('.startup').css('display', 'none');
+            container.fadeIn(500);
+            setTimeout(function() {
+                    container.css('background-image', 'url("images/main3.bmp")').fadeIn(500);
+            }, 6000);
+        }
+                backgroundAudio.onended = function(e) {
+                    backgroundAudio.src = "sounds/MAIN.WAV";
+                    $('.homepage').css('display', 'block');
+                    $('.category').each(function(index) {
+                        setTimeout(function() {
+                            $(this).css('display', 'block');
+                            if (index === categories.length - 1) {
+                                backgroundAudio.load();
+                                backgroundAudio.play();
+                                $('.bottom-nav').css('display', 'flex');
+
+                            }
+                        }.bind(this), 200 * index);
+                    });
+                }
+        
+    });
+</script>
+</html>

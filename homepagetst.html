@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container{
+        width: 640px;
+        height: 440px;
+        background-image: url(images/main3.bmp);
+        background-repeat: no-repeat;
+        background-size: fill;
+    }
+
+    .homepage{
+        width: 100%;
+        height: 100%;
+    }
+
+    .categories{
+        position: relative;
+        width: 81.3%;
+        height: 87%;
+        padding: 15px 40px;
+        padding-bottom: 0px;
+    }
+
+    .category{
+        position: absolute;
+        width: 187px;
+        height: 177px;
+    }
+
+    .category.prod{
+        background-image: url(images/mnprbtn.bmp);
+        z-index: 1;
+    }
+
+    .category.online{
+        background-image: url(images/mnolbtn.bmp);
+        bottom: 0;
+    }
+
+    .category.games{
+        background-image: url(images/mngmbtn.bmp);
+        right: 0;
+    }
+
+    .category.kids{
+        background-image: url(images/mnkdbtn.bmp);
+        right: 0;
+        bottom: 0;
+    }
+
+    .category.knowledge{
+        background-image: url(images/mnkwbtn.bmp);
+        right: 186px;
+        top: 120px;
+        height: 193px;
+    }
+
+    .category:hover{
+        background-position: 374px center;
+    }
+
+    .category:active{
+        background-position: 187px center;
+    }
+
+    .bottom-nav{
+        position: relative;
+        bottom: 0;
+        padding: 0px 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .intro-button{
+        background: url(images/cambtn.bmp);
+        border: none;
+        width: 76px;
+        height: 36px;
+    }
+
+    .intro-button:hover{
+        background-position: 154px center;
+    }
+
+    .exit-button{
+        background: url(images/exitbtn.bmp);
+        border: none;
+        width: 60px;
+        height: 36px;
+    }
+
+    .exit-button:hover{
+        background-position: -67.5px center;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <audio src="sounds/MAIN.WAV" autoplay loop></audio>
+        <div class="homepage">
+            <div class="categories">
+                <div class="category prod"></div>
+                <div class="category online"></div>
+                <div class="category knowledge"></div>
+                <div class="category games"></div>
+                <div class="category kids"></div>
+            </div>
+            <div class="bottom-nav">
+                <button class="intro-button"></button>
+                <button class="exit-button"></button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
