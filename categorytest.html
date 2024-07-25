@@ -29,7 +29,7 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background-image: url(images/KIDS.BMP);
+        background-image: url(images/KNOW.BMP);
     }
 
     .products{
@@ -58,10 +58,40 @@
     .main-button:hover{
         background-position: 284px center;
     }
+
+    .animations{
+        position: absolute;
+        padding: 14px 51px;
+    }
+
+    .animation{
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+
+    .animation.clouds{
+        background-image: url(images/CLOUDANI.bmp);
+        width: 324px;
+        height: 66px;
+        background-position: left center;
+        left: 157px;
+        animation: clouds 5s steps(21);
+    }
+
+    @keyframes clouds {
+        from { background-position: 0 0; }
+            to { background-position: -6804px 0; } /* 324px * 21 frames */
+        }
 </style>
 <body>
     <div class="container">
         <div class="category-page">
+            <div class="animations">
+                <div class="animation clouds"></div>
+                <div class="animation clouds"></div>
+                <div class="animation clouds"></div>
+                <div class="animation clouds"></div>
+            </div>
             <div class="products">
                 <div class="product easyball"></div>
             </div>
