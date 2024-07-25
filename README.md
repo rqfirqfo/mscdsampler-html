@@ -4,7 +4,7 @@ An attempt to recreate the 1996 version of **Microsoft Interactive CD Sampler** 
 *Where do you want to go today?*
 
 ## Want to take a look?
-Currently, there is no GitHub Pages instances at the moment because this is currently not finished, you can download this as a ZIP (click on the green button and click Download as ZIP) and load the index.html file.
+Go to the GitHub Pages instance I have running [here](https://rqfirqfo.github.io/mscdsampler-html/)
 
 ## Goals
 - Try and make the UI as accurate as possible to the original software.
