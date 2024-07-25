@@ -17,5 +17,4 @@
     - Credits []
 - Seperate CSS and JS code into seperate files []
 - Create some catalog demos []
-- Release []
-- Electron port?? []
+- maybe electron port?? []
