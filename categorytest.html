@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container{
+        width: 640px;
+        height: 440px;
+        position: relative;
+        background-image: url(images/main3.bmp);
+    }
+
+    .category-page{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(images/KIDS.BMP);
+    }
+
+    .products{
+        position: relative;
+        width: 81.3%;
+        height: 87%;
+        padding: 15px 40px;
+        padding-bottom: 0px;
+    }
+
+    .bottom-nav{
+        position: relative;
+        bottom: 0;
+        padding: 0px 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-button{
+        background: url(images/retbtn.bmp);
+        border: none;
+        width: 150px;
+        height: 36px;
+    }
+
+    .main-button:hover{
+        background-position: 284px center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="category-page">
+            <div class="products">
+                <div class="product easyball"></div>
+            </div>
+            <div class="bottom-nav">
+                <button class="intro-button"></button>
+                <button class="accessory-button"></button>
+                <button class="main-button"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

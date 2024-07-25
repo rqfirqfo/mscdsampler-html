@@ -8,7 +8,7 @@
 <style>
     @font-face {
         font-family: mssans;
-        src: url(w95fa.woff2) format('woff2');
+        src: url(woff/w95fa.woff2) format('woff2');
     }
 
     body{
@@ -20,13 +20,6 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-    }
-
-    .container{
-        display: none;
-        width: 640px;
-        height: 440px;
-        background-image: url(images/MAIN3A.BMP);
     }
 
     .skip-text{
@@ -41,9 +34,41 @@
         cursor: pointer;
     }
 
+    .disclaimer-text{
+        font-family: mssans;
+        color: rgb(165, 165, 165);
+        font-size: 14px;
+        bottom: 0;
+        position: absolute;
+    }
+
+    .container{
+        display: none;
+        width: 640px;
+        height: 440px;
+        position: relative;
+        background-image: url(images/main3.bmp);
+    }
+
     .homepage{
         width: 100%;
         height: 100%;
+        background-image: url(images/main3.bmp);
+        position: absolute;
+    }
+
+    .wdywtgt{
+        width: 100%;
+        height: 100%;
+        background-image: url(images/MAIN3A.BMP);
+        position: absolute;
+        z-index: 1;
+    }
+
+    .category-page{
+        width: 100%;
+        height: 100%;
+        position: absolute;
         display: none;
     }
 
@@ -152,16 +177,30 @@
         background-position: 133px center;
     }
 
+    .main-button{
+        background: url(images/retbtn.bmp);
+        border: none;
+        width: 150px;
+        height: 36px;
+    }
+
+    .main-button:hover{
+        background-position: 280px center;
+    }
+
 </style>
 <body>
     <div class="startup">
-        <video src="video/mslogo.mp4" autoplay id="start-video"></video>
-        <span class="disclamer-text"></span>
+        <video src="video/mslogo.mp4" id="start-video" autoplay></video>
+        <span class="disclaimer-text">This product is protected by US and international law.</span>
         <span class="skip-text">Skip to Main Menu</span>
     </div>
 
     <div class="container">
         <audio src="sounds/NAR10.WAV" id="audio-thingy"></audio>
+        <div class="wdywtgt">
+            <div class="stars"></div>
+        </div>
         <div class="homepage">
             <div class="categories">
                 <div class="category prod"></div>
@@ -176,8 +215,13 @@
                 <button class="exit-button"></button>
             </div>
         </div>
-        <div class="categorypage">
-
+        <div class="category-page">
+            <div class="category-background"></div>
+            <div class="bottom-nav">
+                <button class="intro-button"></button>
+                <button class="accessory-button"></button>
+                <button class="main-button"></button>
+            </div>
         </div>
     </div>
 </body>
@@ -189,10 +233,18 @@
         var container = $('.container');
         var categories = $('.category');
 
+        startVideo.play();
+
+        // remove this if finished
+        $('.disclaimer-text').click(function(){
+            stopStartup();
+        });
+
         startVideo.onended = function(e) {
             startVideo.src = "video/intro.mp4";
             startVideo.load();
             startVideo.play();
+            $('.disclaimer-text').css('display', 'none');
             $('.skip-text').css('display', 'block');
 
             $('.skip-text').click(function(){
@@ -209,12 +261,16 @@
             backgroundAudio.play();
             startVideo.src = "";
             $('.startup').css('display', 'none');
-            container.fadeIn(500);
+            container.fadeIn(300);
             setTimeout(function() {
-                    container.css('background-image', 'url("images/main3.bmp")').fadeIn(500);
+                $('.wdywtgt').fadeOut(200);
             }, 6000);
         }
                 backgroundAudio.onended = function(e) {
+                    mainmenu();
+                }
+
+                function mainmenu() {
                     backgroundAudio.src = "sounds/MAIN.WAV";
                     $('.homepage').css('display', 'block');
                     $('.category').each(function(index) {
@@ -229,6 +285,21 @@
                         }.bind(this), 200 * index);
                     });
                 }
+
+        $('[class="category kids"]').click(function(){
+            backgroundAudio.pause();
+            backgroundAudio.src = "sounds/NAR20.WAV"
+            $('.homepage').fadeOut(200, function(){
+                $('.category-page').fadeIn(200);
+                backgroundAudio.load();
+                backgroundAudio.play();
+            });
+            $('.category-page').css('background-image', 'url(images/KIDS.BMP)')
+            backgroundAudio.onended = function(e) {
+                backgroundAudio.src = "sounds/KIDWORLD.WAV"
+                backgroundAudio.play();
+            }    
+        });
         
     });
 </script>

@@ -1,7 +1,7 @@
 # t
 - Finish Startup Sequence [mostly ✅]
   - Add stars animation []
-  - Fade effects []
+  - Fade effects [✅]
   - Video intros [✅]
   - Disclaimer text at the beginning []
 - Finish Homepage [✅]
