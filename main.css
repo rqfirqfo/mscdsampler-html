@@ -89,7 +89,7 @@ body{
 
 .category.prod{
     background-image: url(images/mnprbtn.bmp);
-    z-index: 1;
+    top: 0;
 }
 
 .category.online{
