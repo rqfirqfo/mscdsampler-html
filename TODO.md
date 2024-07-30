@@ -13,7 +13,7 @@
   - Fix category online is on the wrong position []
 - Create category pages []
   - Background animation []
-  - Add product images []
+  - Add & position product images []
 - Figure out how to animate the backgrounds of the category pages []
 - Create miscellaneous pages []
   - Accessories []
