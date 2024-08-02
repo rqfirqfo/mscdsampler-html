@@ -11,7 +11,7 @@ or alternatively, you can just download as a zip file and load the index.html fr
 
 ## Goals
 - Try and make the UI as accurate as possible to the original software.
-- Learn more about HTML and JS (i am still a little baby at web programming and i use jquery bc i suck at js)
+- Learn more about HTML and JS (i am still a little baby at web programming and i use jquery bc i suck at js and even at jquery i still suck at it)
 
 ## To-do list
 See [TODO.md](TODO.md)
