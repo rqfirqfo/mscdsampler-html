@@ -1,4 +1,6 @@
 ![Logo](images/github/logo.png)
+### Current progress: **PRE-ALPHA**
+
 An work in progress attempt to recreate the 1996 version of **Microsoft Interactive CD Sampler** to HTML.
 
 *Explore the interactive worlds of Microsoft consumer products.*
