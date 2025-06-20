@@ -26,12 +26,17 @@ body{
     cursor: pointer;
 }
 
+#start-video{
+    display: none;
+}
+
 .disclaimer-text{
     font-family: mssans;
     color: rgb(165, 165, 165);
     font-size: 14px;
     bottom: 0;
     position: absolute;
+    display: none;
 }
 
 .container{
@@ -66,7 +71,7 @@ body{
 
 .categories{
     position: relative;
-    width: 81.3%;
+    width: 81.4%;
     height: 87%;
     padding: 15px 40px;
     padding-bottom: 0px;
@@ -110,7 +115,7 @@ body{
 
 .category.knowledge{
     background-image: url(images/mnkwbtn.bmp);
-    right: 186px;
+    right: 185px;
     top: 120px;
     height: 193px;
 }
@@ -178,7 +183,7 @@ body{
 }
 
 .main-button{
-    background: url(images/RETBTN.bmp);
+    background: url(images/retbtn.BMP);
     border: none;
     width: 150px;
     height: 36px;
@@ -186,4 +191,15 @@ body{
 
 .main-button:hover{
     background-position: 284px center;
+}
+
+.life-button{
+    background: url(images/lifebtn.bmp);
+    border: none;
+    width: 80px;
+    height: 36px;
+}
+
+.life-button:hover{
+    background-position: 160px center;
 }
