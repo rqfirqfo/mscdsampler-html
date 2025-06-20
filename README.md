@@ -1,4 +1,4 @@
-# MS Interactive HTML Sampler
+![Logo](images/github/logo.png)
 An work in progress attempt to recreate the 1996 version of **Microsoft Interactive CD Sampler** to HTML.
 
 *Explore the interactive worlds of Microsoft consumer products.*
