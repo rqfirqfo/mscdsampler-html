@@ -19,4 +19,4 @@ or alternatively, you can just download as a zip file and load the index.html fr
 See [TODO.md](TODO.md)
 
 ## Copyright stuff
-All images, videos and audio are copyrighted to their respectful creators at Microsoft.
+This is an unofficial fan project and is not created by or affiliated with Microsoft. All images, videos and audio are reserved to Microsoft.
